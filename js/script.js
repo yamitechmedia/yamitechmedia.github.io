@@ -20,6 +20,7 @@ $(".contact-form").on("submit", async function (e) {
     const res = await fetch(SCRIPT_URL, {
       method: "POST",
       body: JSON.stringify({
+        formType: "lead",
         name: $("#name").val(),
         email: $("#email").val(),
         phone: $("#phone").val(),
